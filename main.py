@@ -22,12 +22,15 @@ def validate_and_execute():
         elif user_input_to_number == 0:
              print("You entered 0, please enter a valid positive number")
         else:
-            print("Your input is not a vald number, Dont ruin my program")
+            print("You entered a negative value, no conversion for you")
     except ValueError:
-        print("Your input is not a valid number, dont ruin my program!")
+        print("Your input is not a valid number, Dont ruin my program!")
 
-#Get user input
-user_input = input("Hey user, enter a number of days and I will convert it to hours!\n")
+user_input = ""
+#while loop
+while user_input != "exit":
+    #Get user input
+    user_input = input("Hey user, enter a number of days and I will convert it to hours!\n")
+    # function call
+    validate_and_execute()
 
-# function call
-validate_and_execute()
