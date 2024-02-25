@@ -12,7 +12,8 @@ def days_to_units(number_of_days):
     
 # Validate user input with conditional statement and comparison operator
 def validate_and_execute():
-    if user_input.isdigit():
+    # if user_input.isdigit():
+    try:
         #Cast the string input into number
         user_input_to_number = int(user_input)
         if user_input_to_number > 0:
@@ -20,7 +21,9 @@ def validate_and_execute():
             print(calculated_value)
         elif user_input_to_number == 0:
              print("You entered 0, please enter a valid positive number")
-    else:
+        else:
+            print("Your input is not a vald number, Dont ruin my program")
+    except ValueError:
         print("Your input is not a valid number, dont ruin my program!")
 
 #Get user input
